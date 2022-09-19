@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #121214;
+  background-image: url(./assets/bg.jpg);
+  background-position: top center;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 580px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  margin-block: 2rem;
+}
+
+header div {
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+  display: flex;
+  width: 120px;
+  padding: 4px;
+  margin-inline: auto;
+  border-radius: 100%;
+}
+
+header img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+section {
+  color: #ffffff;
+  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+  padding-top: 4px;
+  border-radius: .625rem;
+}
+
+section > div {
+  background-color: #2A2634;
+  border-radius: .5rem;
+  padding: 2rem;
+  padding-top: 1.5rem;
+}
+
+section > div h2 {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 160%;
+  letter-spacing: -0.47px;
+}
+
+section > div p {
+  color: #A1A1AA;
+  font-size: 1rem;
+  line-height: 160%;
+  letter-spacing: -0.18px;
+}
+
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.games-list img {
+  width: 90px;
+  height: 120px;
+  border-radius: .5rem;
+}
+
+.channel-list img {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #443E54;
+  border-radius: 100%;
+}
