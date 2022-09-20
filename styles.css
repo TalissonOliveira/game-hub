@@ -144,6 +144,15 @@ section ul {
   z-index: 10;
 }
 
+.social-list a {
+  display: inline-block;
+  transition: transform .2s ease;
+}
+
+.social-list li:hover a {
+  transform: translateY(-5px);
+}
+
 @keyframes rotateGradient {
   to {
     transform: rotateZ(0deg);
