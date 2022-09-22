@@ -29,7 +29,6 @@ header {
 }
 
 header div {
-  padding: 4px;
   width: 120px;
   height: 120px;
   margin-inline: auto;
@@ -48,7 +47,7 @@ header div::before {
   z-index: -1;
   border-radius: 100%;
 
-  animation: rotateGradient linear 3s infinite;
+  animation: borderImg .8s ease forwards, rotateGradient 3s linear infinite;
 }
 
 header img {
@@ -159,5 +158,14 @@ section ul {
   }
   from {
     transform: rotateZ(360deg);
+  }
+}
+
+@keyframes borderImg {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.08;
   }
 }
