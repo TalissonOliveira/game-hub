@@ -34,6 +34,8 @@ header div {
   margin-inline: auto;
   position: relative;
   border-radius: 100%;
+
+  animation: bounceInImg 1s;
 }
 
 header div::before {
@@ -48,6 +50,7 @@ header div::before {
   border-radius: 100%;
 
   animation: borderImg .8s ease forwards, rotateGradient 3s linear infinite;
+  animation-delay: .8s;
 }
 
 header img {
@@ -150,6 +153,21 @@ section ul {
 
 .social-list li:hover a {
   transform: translateY(-5px);
+}
+
+@keyframes bounceInImg {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  70% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes rotateGradient {
