@@ -60,16 +60,33 @@ header img {
 
 section {
   color: #ffffff;
-  background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50%, #E2D45C 100%);
+  background-image: linear-gradient(90deg, #43E7AD 0%, #E2D45C 20%, #9572FC 40%, #43E7AD 60%, #E2D45C 80%, #9572FC 100%);
+  background-position: 65%;
+  background-size: 200%;
   padding-top: 4px;
   border-radius: .625rem;
 }
+
+section:nth-of-type(1) {
+  animation: sectionFadeInRight .8s ease-out backwards, sectionGradient 10s ease-in 0s infinite;
+}
+
+section:nth-of-type(2) {
+  animation: sectionFadeInRight .8s ease-out .2s backwards, sectionGradient 10s ease-in .8s infinite;
+}
+
+section:nth-of-type(3) {
+  animation: sectionFadeInRight .8s ease-out .4s backwards, sectionGradient 10s ease-in 1.4s infinite;
+}
+
 
 section > div {
   background-color: #2A2634;
   border-radius: .5rem;
   padding: 2rem;
   padding-top: 1.5rem;
+
+  overflow: hidden;
 }
 
 section > div h2 {
@@ -78,6 +95,8 @@ section > div h2 {
   font-weight: 900;
   line-height: 160%;
   letter-spacing: -0.47px;
+
+  animation: textFadeInRight .7s ease .4s backwards;
 }
 
 section > div p {
@@ -85,6 +104,8 @@ section > div p {
   font-size: 1rem;
   line-height: 160%;
   letter-spacing: -0.18px;
+
+  animation: textFadeInRight .7s ease .5s backwards;
 }
 
 section ul {
@@ -99,6 +120,26 @@ section ul {
   width: 90px;
   height: 120px;
   border-radius: .5rem;
+}
+
+.games-list li {
+  animation: gameCardFadeInRight .4s ease-out backwards;
+}
+
+.games-list li:nth-child(1) {
+  animation-delay: .6s;
+}
+
+.games-list li:nth-child(2) {
+  animation-delay: .7s;
+}
+
+.games-list li:nth-child(3) {
+  animation-delay: .8s;
+}
+
+.games-list li:nth-child(4) {
+  animation-delay: .9s;
 }
 
 .channel-list li a {
@@ -138,6 +179,26 @@ section ul {
   scale: 1.06;
 }
 
+.channel-list li {
+  animation: channelImageBounceIn 1s ease-out backwards;
+}
+
+.channel-list li:nth-child(1) {
+  animation-delay: .15s;
+}
+
+.channel-list li:nth-child(2) {
+  animation-delay: .3s;
+}
+
+.channel-list li:nth-child(3) {
+  animation-delay: .45s;
+}
+
+.channel-list li:nth-child(4) {
+  animation-delay: .6s;
+}
+
 .channel-list img {
   width: 70px;
   height: 70px;
@@ -153,6 +214,26 @@ section ul {
 
 .social-list li:hover a {
   transform: translateY(-5px);
+}
+
+.social-list li {
+  animation: socialIconFadeInDown .4s ease-out backwards;
+}
+
+.social-list li:nth-child(1) {
+  animation-delay: .6s;
+}
+
+.social-list li:nth-child(2) {
+  animation-delay: .7s;
+}
+
+.social-list li:nth-child(3) {
+  animation-delay: .8s;
+}
+
+.social-list li:nth-child(4) {
+  animation-delay: .9s;
 }
 
 @keyframes bounceInImg {
@@ -185,5 +266,94 @@ section ul {
   }
   to {
     scale: 1.08;
+  }
+}
+
+@keyframes sectionFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-15rem);
+  }
+  60% {
+    transform: translateX(3rem);
+  }
+  100% {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes textFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes channelImageBounceIn {
+  0% {
+    opacity: 0;
+    transform: rotateZ(0deg) scale(0.5);
+  }
+  50% {
+    transform: rotateZ(400deg);
+  }
+  75% {
+    transform: rotateZ(330deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes gameCardFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    opacity: .3;
+  }
+  60% {
+    transform: translateX(13px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes socialIconFadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(13px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes sectionGradient {
+  0% {
+    background-position: 65%;
+  }
+  25% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  75% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 65%;
   }
 }
